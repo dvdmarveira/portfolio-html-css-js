@@ -1,57 +1,48 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dvd Marques</title>
     <link rel="icon" href="assets/imgs/icon2.png" />
+    <!-- <link href="./assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="./assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="./assets/vendor/aos/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mediaqueries.css">
 </head>
+
 <body>
-    <nav id="desktop-nav">
-        <div class="logo">Deyvid Marques</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#experience">Tecnologias</a></li>
-                <li><a href="#projects">Projetos</a></li>
-                <li><a href="#contact">Contato</a></li>
-                <li>
-                    <img 
-                    id="modeToggle"
-                    class="icon color-icon"
-                    src="./assets/imgs/theme_light.png"
-                    src-light="./assets/imgs/theme_light.png" 
-                    src-dark="./assets/imgs/theme_dark.png" 
-                    alt="Icone do tema"
-                    />
-                </li>
+    <nav id="desktop-nav" class="desktop-nav">
+        <!-- <div class="logo"><i class="bi bi-eyeglasses"></i></div> -->
+        <div class="navbar">
+            <ul id="nav-links" class="nav-links">
+                <li><a href="#profile" class="active" title="Início"><i class="bi bi-house navicon"></i></a></li>
+                <li><a href="#about" title="Sobre"><i class="bi bi-person navicon"></i></a></li>
+                <li><a href="#experience" title="Tecnologias"><i class="bi bi-file-earmark-code"></i></a></li>
+                <li><a href="#projects" title="Projetos"><i class="bi bi-images"></i></a></li>
+                <li><a href="#contact" title="Contato"><i class="bi bi-envelope navicon"></i></a></li>
+                <!-- <img id="modeToggle" class="icon color-icon" src="./assets/imgs/theme_light.png" src-light="./assets/imgs/theme_light.png" src-dark="./assets/imgs/theme_dark.png" alt="Icone do tema" /> -->
+                <li id="theme_mode"><span class="theme_mode" title="Tema"><i class="bi bi-moon" id="modeToggle"></i></span></li>
             </ul>
         </div>
     </nav>
     <nav id="hamburger-nav">
         <div class="logo">Deyvid Marques</div>
         <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick ="toggleMenu()">
+            <div class="hamburger-icon" onclick="toggleMenu()">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
             <div class="menu-links">
-                <li><a href="#about" onclick ="toggleMenu()">Sobre</a></li>
-                <li><a href="#experience" onclick ="toggleMenu()">Tecnologias</a></li>
-                <li><a href="#projects" onclick ="toggleMenu()">Projetos</a></li>
-                <li><a href="#contact" onclick ="toggleMenu()">Contato</a></li>
+                <li><a href="#about" onclick="toggleMenu()">Sobre</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Tecnologias</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projetos</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contato</a></li>
                 <li>
-                    <img 
-                    id="modeToggle2"
-                    class="icon color-icon"
-                    src="./assets/imgs/theme_light.png"
-                    src-light="./assets/imgs/theme_light.png" 
-                    src-dark="./assets/imgs/theme_dark.png" 
-                    alt="Icone do tema"
-                    />
+                    <img id="modeToggle2" class="icon color-icon" src="./assets/imgs/theme_light.png" src-light="./assets/imgs/theme_light.png" src-dark="./assets/imgs/theme_dark.png" alt="Icone do tema" />
                 </li>
             </div>
         </div>
@@ -60,35 +51,15 @@
         <div class="section__pic-container">
             <img src="./assets/imgs/perfil.png" alt="Deyvid Marques foto do perfil">
         </div>
-        <div class="section__text">
-            <p class="section__text__p1">Olá, eu sou</p>
+        <div class="section__text" data-aos="zoom-out">
             <h1 class="title">Deyvid Marques</h1>
-            <p class="section__text__p2">Desenvolvedor Frontend</p>
-            <div class="btn-container">
-                <button class="btn btn-color-2" 
-                onclick="window.open('./assets/imgs/cv.pdf')">Currículo
-                </button>
-                <button class="btn btn-color-1" 
-                onclick="location.href='./#contato'">Contato
-                </button>
-            </div>
+            <p><span class="typed" data-typed-items="Desenvolvedor, Freelancer"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
             <div id="socials-container">
-                <img 
-                src="./assets/imgs/linkedin.svg" 
-                src-light="./assets/imgs/linkedin.svg"
-                src-dark="./assets/imgs/linkedin_dark.png"
-                alt="Perfil no Linkedin" 
-                class="icon linkedin-icon" 
-                onclick="location.href='https:www.linkedin.com/in/deyvidmarques'"
-                />
-                <img 
-                src="./assets/imgs/github.svg" 
-                src-light="./assets/imgs/github.svg"
-                src-dark="./assets/imgs/github_dark.png"
-                alt="Perfil no Github" 
-                class="icon github-icon" 
-                onclick="location.href='https:www.github.com/dvdmarveira'"
-                />
+                <!-- <img src="./assets/imgs/linkedin.svg" src-light="./assets/imgs/linkedin.svg" src-dark="./assets/imgs/linkedin_dark.png" alt="Perfil no Linkedin" class="icon linkedin-icon" onclick="location.href='https:www.linkedin.com/in/deyvidmarques'" /> -->
+                <a href="#" onclick="window.open('https:www.linkedin.com/in/deyvidmarques', '_blank'); return false;"><i class="bi bi-linkedin" title="LinkedIn"></i></a>
+                <a href="#" onclick="window.open('https:www.github.com/dvdmarveira', '_blank'); return false;"><i class="bi bi-github" title="Github"></i></a>
+                <a href="#" onclick="window.open('./assets/imgs/cv.pdf', '_blank'); return false;"><i class="bi bi-file-earmark-person-fill" title="Currículo"></i></a>
+                <!-- <img src="./assets/imgs/github.svg" src-light="./assets/imgs/github.svg" src-dark="./assets/imgs/github_dark.png" alt="Perfil no Github" class="icon github-icon" onclick="location.href='https:www.github.com/dvdmarveira'" /> -->
             </div>
         </div>
     </section>
@@ -97,32 +68,19 @@
         <h1 class="title">Sobre mim</h1>
         <div class="section-container">
             <div class="section__pic-container">
-                <img src="./assets/imgs/sobremim.png" alt="Foto do perfil" class="about-pic"
-                />
+                <img src="./assets/imgs/sobremim.png" alt="Foto do perfil" class="about-pic" />
             </div>
             <div class="about-details-container">
                 <div class="about-containers">
                     <div class="details-container">
-                        <img 
-                        src="./assets/imgs/experience.png" 
-                        src-light="./assets/imgs/experience.png"
-                        src-dark="./assets/imgs/experience_dark.png"
-                        alt="Icon da experiência" 
-                        class="icon"
-                        />
+                        <img src="./assets/imgs/experience.png" src-light="./assets/imgs/experience.png" src-dark="./assets/imgs/experience_dark.png" alt="Icon da experiência" class="icon" />
                         <h3>Experiência</h3>
                         <p>1+ ano <br>Projetos acadêmicos e competições</p>
                     </div>
                     <div class="details-container">
-                        <img 
-                        src="./assets/imgs/education.png"
-                        src-light="./assets/imgs/education.png"
-                        src-dark="./assets/imgs/education_dark.png"
-                        alt="Icon da educação" 
-                        class="icon"
-                        />
+                        <img src="./assets/imgs/education.png" src-light="./assets/imgs/education.png" src-dark="./assets/imgs/education_dark.png" alt="Icon da educação" class="icon" />
                         <h3>Formação</h3>
-                        <p>SENAC  <br>Análise e Desenvolvimento de Sistemas</p>
+                        <p>SENAC <br>Análise e Desenvolvimento de Sistemas</p>
                     </div>
                 </div>
                 <div class="text-container">
@@ -131,295 +89,154 @@
                 </div>
             </div>
         </div>
-        <img 
-        src="./assets/imgs/arrow.png" 
-        src-light="./assets/imgs/arrow.png" 
-        src-dark="./assets/imgs/arrow_dark.png" 
-        alt="Arrow icon" 
-        class="icon arrow" 
-        onclick="location.href='./#experience'"
-        />
+        <img src="./assets/imgs/arrow.png" src-light="./assets/imgs/arrow.png" src-dark="./assets/imgs/arrow_dark.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
     </section>
     <section id="experience">
         <p class="section__text__p1">Maior afinidade com as demais</p>
         <h1 class="title">Tecnologias</h1>
-        <div class="experience-details-container">
-            <div class="about-containers2">
-                <div class="details-container">
-                    <h2 class="experience-sub-title">Frontend</h2>
-                    <div class="article-container">
+        <div class="about-containers2">
+            <div class="details-container">
+                <h2 class="experience-sub-title">Frontend</h2>
+                <div class="article-container">
+                    <div class="article-container-card">
                         <article>
-                            <img 
-                            src="./assets/imgs/html.svg"
-                            src-light="./assets/imgs/html.svg"
-                            src-dark="./assets/imgs/html.svg"
-                            alt="Icon da experiência" 
-                            class="icon"
-                            />
+                            <img src="./assets/imgs/html.svg" src-light="./assets/imgs/html.svg" src-dark="./assets/imgs/html.svg" alt="Icon da experiência" class="icon" />
                             <div>
                                 <h3>HTML</h3>
-                                <p></p>
                             </div>
                         </article>
                         <article>
-                            <img 
-                            src="./assets/imgs/css.svg"
-                            src-light="./assets/imgs/css.svg"
-                            src-dark="./assets/imgs/css.svg"
-                            alt="Icon da experiência" 
-                            class="icon"
-                            />
-                            <div>
-                                <h3>CSS</h3>
-                                <p></p>
-                            </div>
+                            <img src="./assets/imgs/css.svg" src-light="./assets/imgs/css.svg" src-dark="./assets/imgs/css.svg" alt="Icon da experiência" class="icon" />
+                            <h3>CSS</h3>
                         </article>
                         <article>
-                            <img 
-                            src="./assets/imgs/javascript.svg"
-                            src-light="./assets/imgs/javascript.svg"
-                            src-dark="./assets/imgs/javascript.svg"
-                            alt="Icon da experiência" 
-                            class="icon"
-                            />
-                            <div>
-                                <h3>JavaScript</h3>
-                                <p></p>
-                            </div>
+                            <img src="./assets/imgs/javascript.svg" src-light="./assets/imgs/javascript.svg" src-dark="./assets/imgs/javascript.svg" alt="Icon da experiência" class="icon" />
+                            <h3>JavaScript</h3>
+                        </article>
+                    </div>
+                    <div class="article-container-card">
+                        <article>
+                            <img src="./assets/imgs/typescript.svg" src-light="./assets/imgs/typescript.svg" src-dark="./assets/imgs/typescript.svg" alt="Icon da experiência" class="icon" />
+                            <h3>TypeScript</h3>
                         </article>
                         <article>
-                            <img 
-                            src="./assets/imgs/typescript.svg"
-                            src-light="./assets/imgs/typescript.svg"
-                            src-dark="./assets/imgs/typescript.svg"
-                            alt="Icon da experiência" 
-                            class="icon"
-                            />
-                            <div>
-                                <h3>TypeScript</h3>
-                                <p></p>
-                            </div>
+                            <img src="./assets/imgs/react.svg" src-light="./assets/imgs/react.svg" src-dark="./assets/imgs/react.svg" alt="Icon da experiência" class="icon" />
+                            <h3>React</h3>
                         </article>
                         <article>
-                            <img 
-                            src="./assets/imgs/react.svg"
-                            src-light="./assets/imgs/react.svg"
-                            src-dark="./assets/imgs/react.svg"
-                            alt="Icon da experiência" 
-                            class="icon"
-                            />
-                            <div>
-                                <h3>React</h3>
-                                <p></p>
-                            </div>
-                        </article>
-                        <article>
-                            <img 
-                            src="./assets/imgs/nextjs.svg"
-                            src-light="./assets/imgs/nextjs.svg"
-                            src-dark="./assets/imgs/nextjs.svg"
-                            alt="Icon da experiência" 
-                            class="icon"
-                            />
-                            <div>
-                                <h3>Next JS</h3>
-                                <p></p>
-                            </div>
+                            <img src="./assets/imgs/nextjs.svg" src-light="./assets/imgs/nextjs.svg" src-dark="./assets/imgs/nextjs.svg" alt="Icon da experiência" class="icon" />
+                            <h3>Next JS</h3>
                         </article>
                     </div>
                 </div>
-                <div class="details-container">
-                    <h2 class="experience-sub-title">Backend</h2>
-                    <div class="article-container">
+            </div>
+            <div class="details-container">
+                <h2 class="experience-sub-title">Backend</h2>
+                <div class="article-container">
+                    <div class="article-container-card">
                         <article>
-                            <img 
-                            src="./assets/imgs/nodejs.svg"
-                            src-light="./assets/imgs/nodejs.svg"
-                            src-dark="./assets/imgs/nodejs.svg"
-                            alt="Icon da experiência" 
-                            class="icon"
-                            />
-                            <div>
-                                <h3>Node JS</h3>
-                                <p></p>
-                            </div>
+                            <img src="./assets/imgs/nodejs.svg" src-light="./assets/imgs/nodejs.svg" src-dark="./assets/imgs/nodejs.svg" alt="Icon da experiência" class="icon" />
+                            <h3>Node JS</h3>
                         </article>
                         <article>
-                            <img 
-                            src="./assets/imgs/python.svg"
-                            src-light="./assets/imgs/python.svg"
-                            src-dark="./assets/imgs/python.svg"
-                            alt="Icon da experiência" 
-                            class="icon"
-                            />
-                            <div>
-                                <h3>Python</h3>
-                                <p></p>
-                            </div>
+                            <img src="./assets/imgs/python.svg" src-light="./assets/imgs/python.svg" src-dark="./assets/imgs/python.svg" alt="Icon da experiência" class="icon" />
+                            <h3>Python</h3>
+                        </article>
+                    </div>
+                    <div class="article-container-card">
+                        <article>
+                            <img src="./assets/imgs/mysql.svg" src-light="./assets/imgs/mysql.svg" src-dark="./assets/imgs/mysql.svg" alt="Icon da experiência" class="icon" />
+                            <h3>MySQL</h3>
                         </article>
                         <article>
-                            <img 
-                            src="./assets/imgs/mysql.svg"
-                            src-light="./assets/imgs/mysql.svg"
-                            src-dark="./assets/imgs/mysql.svg"
-                            alt="Icon da experiência" 
-                            class="icon"
-                            />
-                            <div>
-                                <h3>MySQL</h3>
-                                <p></p>
-                            </div>
-                        </article>
-                        <article>
-                            <img 
-                            src="./assets/imgs/git.svg"
-                            src-light="./assets/imgs/git.svg"
-                            src-dark="./assets/imgs/git.svg"
-                            alt="Icon da experiência" 
-                            class="icon"
-                            />
-                            <div>
-                                <h3>Git</h3>
-                                <p></p>
-                            </div>
+                            <img src="./assets/imgs/git.svg" src-light="./assets/imgs/git.svg" src-dark="./assets/imgs/git.svg" alt="Icon da experiência" class="icon" />
+                            <h3>Git</h3>
                         </article>
                     </div>
                 </div>
             </div>
         </div>
-        <img 
-        src="./assets/imgs/arrow.png" 
-        src-light="./assets/imgs/arrow.png" 
-        src-dark="./assets/imgs/arrow_dark.png" 
-        alt="Arrow icon" 
-        class="icon arrow" 
-        onclick="location.href='./#projects'"
-        />
+        <img src="./assets/imgs/arrow.png" src-light="./assets/imgs/arrow.png" src-dark="./assets/imgs/arrow_dark.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
     </section>
     <section id="projects">
         <p class="section__text__p1">Conheça alguns dos meus</p>
         <h1 class="title">Projetos</h1>
         <div class="experience-details-container">
             <div class="about-containers">
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img 
-                    src="./assets/imgs/enersi1.png" 
-                    alt="Enersi" 
-                    class="project-img"
-                    />
+                <div class="details-container2 color-container">
+                    <div class="article-container">
+                        <img src="./assets/imgs/enersi1.png" alt="Enersi" class="project-img" />
+                    </div>
+                    <h2 class="experience-sub-title project-title">Enersi</h2>
+                    <p class="project-details">Projeto desenvolvido com o propósito de conectar pessoas que desejam utilizar energia limpa a empresas parceiras que oferecem os seus serviços a preços acessíveis.
+                    </p>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" onclick="window.open('https:www.github.com/'), '_blank'">
+                            Github
+                        </button>
+                        <button class="btn btn-color-2 project-btn" onclick="window.open('https:www.figma.com/proto/cs5qXx8dpzrwS9h8DbBcBz/Untitled?node-id=0-1&p=f&t=t4M7lfAQyG7Nvd8z-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A65&show-proto-sidebar=1'), '_blank'">
+                            Figma
+                        </button>
+                    </div>
                 </div>
-                <h2 class="experience-sub-title project-title">Enersi</h2>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" 
-                    onclick="location.href='https:www.figma.com/proto/cs5qXx8dpzrwS9h8DbBcBz/Untitled?node-id=0-1&p=f&t=t4M7lfAQyG7Nvd8z-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A65&show-proto-sidebar=1'"
-                    >
-                        Figma
-                    </button>
-                    <!--<button class="btn btn-color-2 project-btn" 
-                    onclick="location.href='https:www.github.com/'"
-                    >
-                        Live
-                    </button>-->
-                </div> 
-            </div>
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img 
-                    src="./assets/imgs/salaosenac1.png" 
-                    alt="Salão de Beleza" 
-                    class="project-img"
-                    />
+                <div class="details-container2 color-container">
+                    <div class="article-container">
+                        <img src="./assets/imgs/salaosenac1.png" alt="Salão de Beleza" class="project-img" />
+                    </div>
+                    <h2 class="experience-sub-title project-title">Salão Senac</h2>
+                    <p class="project-details">Plataforma para o salão de beleza do SENAC que integra agendamento online, registro detalhado de serviços, previsão de retorno e feedback dos clientes.
+                    </p>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" onclick="window.open('https:www.github.com/'), '_blank'">
+                            Github
+                        </button>
+                        <button class="btn btn-color-2 project-btn" onclick="window.open('https:www.figma.com/'), '_blank'">
+                            Figma
+                        </button>
+                    </div>
                 </div>
-                <h2 class="experience-sub-title project-title">Salão Senac</h2>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" 
-                    onclick="location.href='https:www.github.com/'"
-                    >
-                        Github
-                    </button>
-                    <button class="btn btn-color-2 project-btn" 
-                    onclick="location.href='https:www.figma.com/'"
-                    >
-                        Figma
-                    </button>
+                <div class="details-container2 color-container">
+                    <div class="article-container">
+                        <img src="./assets/imgs/recifencia1.png" alt="Recifência" class="project-img" />
+                    </div>
+                    <h2 class="experience-sub-title project-title">Recifência</h2>
+                    <p class="project-details">Plataforma com o propósito de impulsionar a arte local, oferecendo visibilidade aos artistas e conectando-os a possíveis contratantes.
+                    </p>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" onclick="window.open('https:github.com/dvdmarveira/residencia-recifen'), '_blank'">
+                            Github
+                        </button>
+                        <button class="btn btn-color-2 project-btn" onclick="window.open('https:www.figma.com/proto/Fj6KUqp9yevh7zpptNmxbf/Untitled?node-id=0-1&p=f&t=P25MKdFODkksIkft-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=116%3A2&show-proto-sidebar=1'), '_blank'">
+                            Figma
+                        </button>
+                    </div>
                 </div>
-            </div>
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img 
-                    src="./assets/imgs/recifencia1.png" 
-                    alt="Recifência" 
-                    class="project-img"
-                    />
-                </div>
-                <h2 class="experience-sub-title project-title">Recifência</h2>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" 
-                    onclick="location.href='https:github.com/dvdmarveira/residencia-recifen'"
-                    >
-                        Github
-                    </button>
-                    <button class="btn btn-color-2 project-btn" 
-                    onclick="location.href='https:www.figma.com/proto/Fj6KUqp9yevh7zpptNmxbf/Untitled?node-id=0-1&p=f&t=P25MKdFODkksIkft-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=116%3A2&show-proto-sidebar=1'"
-                    >
-                        Figma
-                    </button>
-                </div>
-            </div>
             </div>
         </div>
-        <img 
-        src="./assets/imgs/arrow.png" 
-        src-light="./assets/imgs/arrow.png" 
-        src-dark="./assets/imgs/arrow_dark.png" 
-        alt="Arrow icon" 
-        class="icon arrow" 
-        onclick="location.href='./#contact'"
-        />
+        <img src="./assets/imgs/arrow.png" src-light="./assets/imgs/arrow.png" src-dark="./assets/imgs/arrow_dark.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
     </section>
     <section id="contact">
         <p class="section__text__p1">Entre em</p>
         <h1 class="title">Contato</h1>
         <div class="contact-info-upper-container">
             <div class="contact-info-container">
-                <img 
-                src="./assets/imgs/email.png" 
-                src-light="./assets/imgs/email.png" 
-                src-dark="./assets/imgs/email_dark.png" 
-                alt="Icone de e-mail" 
-                class="icon contact-icon email-icon"
-                />
+                <img src="./assets/imgs/email.png" src-light="./assets/imgs/email.png" src-dark="./assets/imgs/email_dark.png" alt="Icone de e-mail" class="icon contact-icon email-icon" />
                 <p><a href="mailto:dvdmarveira@gmail.com">dvdmarveira@gmail.com</a></p>
             </div>
             <div class="contact-info-container">
-                <img 
-                src="./assets/imgs/linkedin.svg" 
-                src-light="./assets/imgs/linkedin.svg"
-                src-dark="./assets/imgs/linkedin_dark.png"
-                alt="Perfil no Linkedin" 
-                class="icon linkedin-icon" 
-                onclick="location.href='https:www.linkedin.com/in/deyvidmarques'"
-                />
-                <p><a href="https:www.linkedin.com/in/deyvidmarques">LinkedIn</a></p>
+                <!-- <img src="./assets/imgs/linkedin.svg" src-light="./assets/imgs/linkedin.svg" src-dark="./assets/imgs/linkedin_dark.png" alt="Perfil no Linkedin" class="icon linkedin-icon" onclick="location.href='https:www.linkedin.com/in/deyvidmarques'" />
+                <p><a href="https:www.linkedin.com/in/deyvidmarques">LinkedIn</a></p> -->
+                <i class="bi bi-linkedin"></i>
+                <p><a href="#" onclick="window.open('https:www.linkedin.com/in/deyvidmarques', '_blank'); return false;">LinkedIn</a></p>
             </div>
         </div>
     </section>
     <footer>
-        <nav>
-            <div class="nav-links-container">
-                <ul class="nav-links">
-                    <li><a href="#desktop-nav" onclick ="toggleMenu()">Início</a></li>
-                    <li><a href="#about">Sobre</a></li>
-                    <li><a href="#experience">Tecnologias</a></li>
-                    <li><a href="#projects">Projetos</a></li>
-                    
-                    
-                </ul>
-            </div>
-        </nav>
         <p>Copyright &#169; 2025 Deyvid Marques. Todos os direitos reservados.</p>
     </footer>
-    <script src="script.js"></script>    
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="./assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
