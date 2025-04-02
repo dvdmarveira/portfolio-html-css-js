@@ -97,29 +97,27 @@ nav {
   gap: 2rem;
   list-style-type: none;
   font-size: 1.5rem;
-  background-color: var(--background-color-2);
-  border: 0.01rem solid rgb(181, 181, 181);
 
   border: none;
   height: fit-content;
-
-  transition: 3s ease-out;
 }
 
 .nav-links.scrolled {
   background: var(--background-color-2);
-
   gap: 0.8rem;
   justify-content: center;
+  transition: 3s ease-out;
 }
 
 .desktop-nav.scrolled {
   justify-content: start;
   overflow-x: hidden;
+  transition: 3s ease-out;
 }
 
 .desktop-nav.scrolled .navbar {
   width: 100vw;
+  transition: 3s ease-out;
 }
 
 .nav-links li {
@@ -487,7 +485,7 @@ article {
 
 article h3 {
   font-size: 15px;
-  color: #272829;
+  color: var(--terciary-color);
 }
 
 article .icon {
@@ -520,7 +518,7 @@ article .icon {
 
 .project-details {
   font-size: 0.9375rem;
-  color: #45505b;
+  color: var(--secondary-color);
   text-align: justify;
 }
 

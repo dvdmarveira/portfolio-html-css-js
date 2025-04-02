@@ -59,11 +59,36 @@
     height: fit-content;
     margin-bottom: 2rem;
   }
+
+  .section__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section__text .title {
+    text-wrap: nowrap;
+    font-size: 2.5rem;
+  }
+
   .about-containers,
   .contact-info-upper-container,
   .btn-container {
     flex-wrap: wrap;
   }
+
+  .about-containers2 {
+    margin-top: 10px;
+    grid-template-columns: 1fr;
+    grid-column: 1;
+    gap: 15px;
+  }
+
+  .about-containers {
+    flex-direction: column;
+  }
+
   .contact-info-container {
     margin: 0;
   }
@@ -84,7 +109,7 @@
   }
   .section__pic-container {
     width: auto;
-    height: 46vh;
+    height: 26vh;
     justify-content: center;
   }
   .section__text__p2 {
